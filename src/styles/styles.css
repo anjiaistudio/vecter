@@ -632,7 +632,7 @@ button.goRight {
     padding: 0 10%;
   }
 }
-@media (max-width: 359px) {
+@media (max-width: 700px) {
   .floating_header{
     padding: 10px 0;
   }
