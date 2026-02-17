@@ -23,13 +23,13 @@ jobs:
           # cache: 'npm'
 
       - name: Install and Build 🔧
+        env:
+          GENERATE_SOURCEMAP: false
+          SKIP_PREFLIGHT_CHECK: true
+          DISABLE_ESLINT_PLUGIN: true
         run: |
           npm install
-          npm run build
-          env:
-            GENERATE_SOURCEMAP: false
-            SKIP_PREFLIGHT_CHECK: true
-            DISABLE_ESLINT_PLUGIN: true
+          npm run build          
 
       - name: Upload artifact 📤
         uses: actions/upload-pages-artifact@v3
