@@ -1,7 +1,7 @@
 /* Hide all nav-links a except .cnt-btn */
 :root {
-  --bg-color: #242424;
-  --bg-color-dark: #202020;
+  --bg-color: #202020;
+  --bg-color-dark: #111111;
   --bg-color-white: #ffffff;
   --text-color: #fff;
   --text-color-black: #000000;
@@ -188,7 +188,7 @@ a {
 
 /* HERO SECTION */
 .hero {
-  padding: 250px 0 150px 0;
+  /* padding: 250px 0 150px 0; */
   position: relative;
   background-color: var(--bg-color);
   text-align: center;
@@ -306,7 +306,7 @@ a {
 }
 
 /* PROBLEM SECTION */
-.problem-section {
+.problem-section,.deploys-section {
   /* background-color:var(--bg-color-dark); */
   padding: 100px 0;
 }
@@ -318,10 +318,87 @@ a {
   width: 48%;
   float: right;
 }
-.problem-content h3,.process-section h2, .cases-section h2 {
+.deploys-section .title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.problem-content h3,.process-section h2, .cases-section h2,.deploys-section h2 {
   font-size: 32px;
   margin-bottom: 24px;
 }
+.deploys-section h2 {
+  margin-bottom: 15px;
+}
+.deploys-section h6 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.deploys-section h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.deploy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.deploy-item{
+  border:1px solid var(--bg-color);
+}
+.deploy-item-desc{
+  padding:20px;
+  color:var(--color-gray);
+}
+.deploy-item-desc h3{
+  color:var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.deploy-item-desc span{
+  margin-bottom: 10px;
+  float:left;
+  padding:10px;
+  line-height: 1;
+  background-color: var(--enterprise-text);
+  color:var(--highlight)
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 45px) / var(--items-desktop, 3));
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .carousel-track {
+    grid-auto-columns: calc(100% / var(--items-tablet, 2));
+  }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  .carousel-track {
+    grid-auto-columns: calc(100% / var(--items-mobile, 1));
+  }
+}
+
 
 .problem-content p,.process-section p, .cases-section p  {
   margin-bottom: 16px;
@@ -397,6 +474,148 @@ a {
   width: 100%;
   max-width: 300px;
   transition: all 0.3s ease;
+}
+
+/* Banner carousel styles */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  background:
+    "radial-gradient(circle at top, #020819 0%, #02010a 40%, #000000 100%)";
+}
+.banner-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.banner-track {
+  display: flex;
+  will-change: transform;
+}
+.banner-slide {
+  padding: 250px 0 150px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.banner_inside {
+  padding: 0 10%
+}
+.banner-slide h1 {
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.banner-slide h5 {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  margin: 20px 0;
+  color: var(--highlight);
+}
+
+.banner-slide h6 {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 1px 1px 1px var(--bg-color-white);
+  color: var(--highlight);
+}
+
+.banner-slide p {
+  font-size: 18px;
+  color: var(--secondary-text);
+}
+
+.banner-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.banner-prev, .banner-next {
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.banner-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.banner-dot {
+  width: 50px;
+  height: 2px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+}
+.banner-dot.selected {
+  background: var(--highlight);
+  box-shadow: 0 0 0 4px rgba(0,68,204,0.12);
+}
+
+/* Network background (cryptographic 3D perspective feel) */
+.banner-slide { position: relative; }
+.banner-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.14;
+}
+.banner-slide > .wrapper { position: relative; z-index: 1; }
+.banner-background .network-lines line {
+  stroke: rgba(0,68,204,0.9);
+  stroke-width: 0.35;
+  stroke-linecap: round;
+  stroke-dasharray: 0.8 0.6;
+  animation: network-dash 2s linear infinite;
+}
+.banner-background .network-nodes circle {
+  fill: rgba(0,68,204,0.95);
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: network-pulse 2.6s infinite ease-in-out;
+}
+
+@keyframes network-dash {
+  to { stroke-dashoffset: -2; }
+}
+
+@keyframes network-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* .hero { padding: 140px 0 80px; } */
+  .banner-slide h1 { font-size: 28px; }
+  .banner-slide .tagline { font-size: 16px; }
 }
 .timeline-step.scrolled .timeline-content {
   background: var(--bg-color-white);
@@ -567,17 +786,17 @@ button.goRight {
   width: 100%;
   transition: transform 0.5s cubic-bezier(.4,0,.2,1);
 }
-.testimonial-card{ 
+.testimonial-card{
   min-width: 100%;
   transition: all 0.3s ease;
   padding: 32px;
   padding-bottom: 0;
 }
-.testimonial-card p{ 
+.testimonial-card p{
   font-size: 20px;
   color: var(--text-color);
 }
-.testimonial-card span { 
+.testimonial-card span {
   color: var(--color-gray);
 }
 .testimonial-dots {
@@ -591,7 +810,7 @@ button.goRight {
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-  transition: background 0.3s;  
+  transition: background 0.3s;
 }
 
 
@@ -648,7 +867,7 @@ button.goRight {
     font-size: 24px;
   }
   .hero{
-    padding: 150px 0 50px 0;
+    /* padding: 150px 0 50px 0; */
   }
   .hero-actions{
     display: grid;
