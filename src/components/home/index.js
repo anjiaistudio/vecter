@@ -1,12 +1,17 @@
-export { default as Banner } from "./banner";
-export { default as Enterprise } from "./enterprise";
+export { default as Platforms } from "./_platforms";
+export { default as Capabilities } from "./capabilities";
+export { default as CaseStudies } from "./caseStudies";
+export { default as EmailCapture } from "./emailCapture";
 export { default as Footer } from "./footer";
-export { default as Header } from "./header";
-export { default as Partners } from "./partners";
-export { default as ProblemSection } from "./problemSection";
-export { default as Process } from "./process";
+export { default as GetStarted } from "./getStarted";
+export { default as Governance } from "./governance";
+export { default as Hero } from "./hero";
+export { default as Marquee } from "./marquee";
+export { default as MobileNavigation } from "./mobileNavigation";
+export { default as Navigation } from "./navigation";
+export { default as Sectors } from "./sectors";
 export { default as Services } from "./services";
-export { default as TestimonialCarousel } from "./testimonials";
+export { default as Statement } from "./statement";
+export { default as StickyBar } from "./stickyBar";
+export { default as Team } from "./team";
 
-// Add additional exports from this folder as components are added,
-// e.g. export { default as Foo } from './foo';

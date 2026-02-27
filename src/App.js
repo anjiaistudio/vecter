@@ -1,36 +1,41 @@
 import {
-  Banner,
-  Enterprise,
-  Footer,
-  Header,
-  Partners,
-  ProblemSection,
-  Process,
-  Services,
-  TestimonialCarousel,
+	Capabilities,
+	CaseStudies,
+	EmailCapture,
+	Footer,
+	GetStarted,
+	Governance,
+	Hero,
+	Marquee,
+	MobileNavigation,
+	Navigation,
+	Sectors,
+	Services,
+	Statement,
+	StickyBar,
+	Team,
 } from "@components/home";
 
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			<Navigation />
+			<MobileNavigation />
 
-			<main className="wrapper ">
-				<Banner nav={false} dots={true} autoplay={true} />
-
-				<ProblemSection />
-
+			<main className="wrapper">
+				<StickyBar />
+				<Hero />
+				<Marquee />
 				<Services />
-
-				<Process />
-
-				<Enterprise />
-
-				<Partners />
-
-				<TestimonialCarousel />
+				<Statement />
+				<CaseStudies />
+				<Capabilities />
+				<Sectors />
+				<EmailCapture />
+				<Governance />
+				<Team />
+				<GetStarted />
 			</main>
-
 			<Footer />
 		</div>
 	);

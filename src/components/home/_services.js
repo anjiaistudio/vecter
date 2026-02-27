@@ -1,17 +1,23 @@
 const Services = (props) => {
 	return (
-		<section id="services" aria-labelledby="services-heading">
+		<div
+			id="services"
+			className="wrapper services dark-bg"
+			aria-labelledby="services-heading"
+		>
 			<div className="container">
-				<div className="services-header">
+				<div className="wrapper services-header">
 					<span className="section-label">Our Process</span>
-					<h2 id="services-heading">How We Deliver AI That Works</h2>
-					<p style={{ "margin-top": "16px" }}>
+					<h2 className="wrapper" id="services-heading">
+						How We Deliver AI That Works
+					</h2>
+					<p>
 						We don't just recommend AI — we build, deploy, and improve it. Every
 						engagement follows a proven methodology designed to produce real
 						business outcomes.
 					</p>
 				</div>
-				<div className="services-cards">
+				<div className="wrapper services-cards">
 					<div className="service-card">
 						<div className="service-num">01 — DISCOVER</div>
 						<h3>Map &amp; Prioritise</h3>
@@ -86,7 +92,7 @@ const Services = (props) => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 
