@@ -2,7 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./styles/styles_new.css";
+// if we want light theme then use below line instead of styles_new_dark.css
+// import "./styles/styles_new.css";
+// if we want dark theme then use below line instead of styles_new.css
+import "./styles/styles_new_dark.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

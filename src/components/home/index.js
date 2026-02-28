@@ -1,4 +1,3 @@
-export { default as Platforms } from "./_platforms";
 export { default as Capabilities } from "./capabilities";
 export { default as CaseStudies } from "./caseStudies";
 export { default as EmailCapture } from "./emailCapture";
