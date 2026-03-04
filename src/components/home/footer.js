@@ -13,11 +13,11 @@ const Footer = (props) => {
 							OpenAI, and AWS Bedrock.
 						</p>
 						<a
-							href="mailto:hello@vecter.com.au"
+							href="mailto:contact@vector.com.au"
 							className="btn btn-dark"
 							style={{ "font-size": "13px", padding: "10px 20px" }}
 						>
-							hello@vecter.com.au
+							contact@vector.com.au
 						</a>
 					</div>
 					<div className="footer-col">

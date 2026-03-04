@@ -17,19 +17,19 @@ const MobileNavigation = (props) => {
 			>
 				✕
 			</span>
-			<a href="#services" onClick="closeMobileMenu()">
+			<a href="#services" onClick={handleOnClick}>
 				Services
 			</a>
-			<a href="#sectors" onClick="closeMobileMenu()">
+			<a href="#sectors" onClick={handleOnClick}>
 				Industries
 			</a>
-			<a href="#governance" onClick="closeMobileMenu()">
+			<a href="#governance" onClick={handleOnClick}>
 				Governance
 			</a>
-			<a href="#team" onClick="closeMobileMenu()">
+			<a href="#team" onClick={handleOnClick}>
 				About
 			</a>
-			<a href="#get-started" onClick="closeMobileMenu()">
+			<a href="#get-started" onClick={handleOnClick}>
 				Get in Touch →
 			</a>
 		</div>

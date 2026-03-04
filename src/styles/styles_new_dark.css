@@ -1050,7 +1050,7 @@ footer {
 @media (max-width: 768px) {
   .sticky-cta-subtext { display: none; }
   .sticky-cta-text { font-size: 13px; }
-  #sticky-cta { padding: 12px 16px; }
+  #sticky-cta { padding: 12px 16px; display: none;}
 }
 .mt-1x {
   margin-top: 16px;
