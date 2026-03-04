@@ -17,8 +17,8 @@ const Team = (props) => {
 						<div className="team-name">Rohit Lakhotia</div>
 						<div className="team-role">Co-Founder &amp; Strategy</div>
 						<p>
-							Ex Head of Customer and Channel AI at Telstra. One of Australia's
-							leading authorities on AI automation. Creator of Ask Telstra.
+							Ex Head of Customer and Channel AI at Vecter. One of Australia's
+							leading authorities on AI automation. Creator of Ask Vecter.
 							Proven track record delivering market-leading automation outcomes
 							at enterprise scale.
 						</p>

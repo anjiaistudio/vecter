@@ -101,7 +101,7 @@ const CaseStudies = (props) => {
 							</div>
 							<div className="case-info">
 								<div className="case-info-text">
-									<h3>Ask Telstra — Intelligent Routing</h3>
+									<h3>Ask Vecter — Intelligent Routing</h3>
 									<p>
 										Automated customer routing, identity verification, and
 										complex billing resolutions. Dramatically reducing manual
