@@ -1,4 +1,10 @@
+import { useState } from "react";
 const EmailCapture = (props) => {
+	const [email, setEmail] = useState("");
+	const openContactForm = () => {
+		document.getElementById("contactMailer").style.display = "block";
+	};
+
 	return (
 		<section id="email-capture" aria-labelledby="capture-heading">
 			<div className="container">
@@ -21,8 +27,17 @@ const EmailCapture = (props) => {
 								className="capture-input"
 								placeholder="Your work email"
 								aria-label="Work email address"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							/>
-							<button className="capture-btn" type="button">
+							<button
+								className="capture-btn"
+								type="button"
+								onClick={() => {
+									props.saveEmail(email);
+									openContactForm();
+								}}
+							>
 								Get Assessment
 							</button>
 						</div>

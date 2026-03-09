@@ -30,6 +30,7 @@ function ensureThemeLink() {
 }
 
 function App() {
+	const [email, setEmail] = useState("");
 	const [theme, setTheme] = useState(() => {
 		try {
 			return localStorage.getItem("theme") || "light";
@@ -83,11 +84,11 @@ function App() {
 				<CaseStudies />
 				<Capabilities />
 				<Sectors />
-				<EmailCapture />
+				<EmailCapture saveEmail={(email) => setEmail(email)} />
 				<Governance />
 				<Team />
 				<GetStarted />
-				<ContactForm />
+				<ContactForm email={email} />
 			</main>
 			<Footer />
 		</div>
