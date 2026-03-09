@@ -35,7 +35,7 @@ function App() {
 	const [themeLoaded, setThemeLoaded] = useState(false);
 	const [theme, setTheme] = useState(() => {
 		try {
-			return localStorage.getItem("theme") || "light";
+			return localStorage.getItem("theme") || "dark";
 		} catch (e) {
 			return "light";
 		}

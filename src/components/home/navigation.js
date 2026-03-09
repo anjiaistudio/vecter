@@ -4,7 +4,7 @@ const Navigation = (props) => {
 	const headerRef = useRef(null);
 	const [theme, setTheme] = useState(() => {
 		try {
-			return localStorage.getItem("theme") || "light";
+			return localStorage.getItem("theme") || "dark";
 		} catch (e) {
 			return "light";
 		}
@@ -164,7 +164,7 @@ const Navigation = (props) => {
 				</li>
 				<li>
 					<a style={{ cursor: "pointer" }} onClick={() => toggleTheme(theme)}>
-						{theme === "dark" ? "🌞 Dark" : "🌙 Light"}
+						{theme === "dark" ? "🌙 Light" : "🌞 Dark"}
 					</a>
 				</li>
 			</ul>
