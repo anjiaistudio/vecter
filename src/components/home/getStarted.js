@@ -1,4 +1,7 @@
 const GetStarted = (props) => {
+	const openForm = () => {
+		document.getElementById("contactMailer").style.display = "block";
+	};
 	return (
 		<section id="get-started" aria-labelledby="cta-heading">
 			<video
@@ -29,7 +32,8 @@ const GetStarted = (props) => {
 					feasibility, define the right approach, and build a clear path to
 					execution — starting with the tools you already have.
 				</p>
-				<a href="mailto:contact@vector.com.au" className="btn btn-primary">
+				{/* <a href="mailto:contact@vector.com.au" className="btn btn-primary"> */}
+				<a onClick={openForm} className="btn btn-primary">
 					Get in Touch →
 				</a>
 			</div>

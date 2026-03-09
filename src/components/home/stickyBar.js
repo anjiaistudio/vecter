@@ -50,7 +50,7 @@ const StickyBar = (props) => {
 				<a
 					href="#get-started"
 					className="btn btn-primary"
-					style={{ padding: "11px 24px", "font-size": "14px" }}
+					style={{ padding: "11px 24px", fontSize: "14px" }}
 				>
 					Book Your Free Assessment →
 				</a>

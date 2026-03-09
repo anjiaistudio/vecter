@@ -1055,3 +1055,97 @@ footer {
 .mt-1x {
   margin-top: 16px;
 }
+
+/* contact-mailer */
+.contact-mailer_bg{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none;
+  padding: 50px 0;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y:auto;
+}
+.contact-mailer_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-mailer{
+  position: relative;
+  background: #242424;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 800px;
+  padding: 50px;
+  overflow: hidden;
+}
+.contact-mailer h2{
+  margin-bottom: 10px;
+}
+.contact-mailer-description {
+  margin-bottom: 30px;
+}
+.contact-overlay{
+  z-index: 9;
+  position: relative;
+}
+.contact-mailer-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+.contact-mailer-close button{
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 20px;
+  padding: 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field-message {
+  margin-top: 20px;
+}
+.field-grid input ,
+.field-message textarea {
+  width:100%;
+  height:50px;
+  padding:0 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color:var(--text);
+}
+.field-message textarea {
+  height:150px;
+  padding:10px;
+}
+.field-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .field-grid{
+    grid-template-columns: 1fr;
+  }
+}

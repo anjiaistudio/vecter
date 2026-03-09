@@ -15,7 +15,7 @@ const Footer = (props) => {
 						<a
 							href="mailto:contact@vector.com.au"
 							className="btn btn-dark"
-							style={{ "font-size": "13px", padding: "10px 20px" }}
+							style={{ fontSize: "13px", padding: "10px 20px" }}
 						>
 							contact@vector.com.au
 						</a>
@@ -71,9 +71,6 @@ const Footer = (props) => {
 							</li>
 							<li>
 								<a href="#get-started">Contact</a>
-							</li>
-							<li>
-								<a href="mailto:hello@vecter.com.au">hello@vecter.com.au</a>
 							</li>
 						</ul>
 					</div>
