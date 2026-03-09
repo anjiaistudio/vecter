@@ -148,16 +148,16 @@ nav.scrolled .nav-cta:hover { background: #2a46e8 !important; }
 .nav-item-dropdown { position: relative; }
 .mega-menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100%);
   left: 50%;
   transform: translateX(-50%);
-  background: #fff;
+  background: rgba(24,24,24,0.95);
   border: 1px solid var(--card-border);
   border-radius: 12px;
-  padding: 28px 32px;
-  width: 560px;
+  padding: 20px 25px;
+  width: 300px;
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
   z-index: 100;

@@ -4,8 +4,8 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: "Google Sans", sans-serif;
   font-weight: 400;
-  color: #fff;
-  background: #111;
+  color: #1a1a1a;
+  background: #fff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -16,11 +16,11 @@ body {
   --accent-light: #6b7ffe;
   --dark: #0b0b0b;
   --dark-2: #0a0a0a;
-  --text: #fff;
-  --muted: #fff;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
   --light: #ededed;
-  --bg-off: #121212;
-  --card-border: #444;
+  --bg-off: #f8f8f8;
+  --card-border: #e5e5e5;
   --container: 1200px;
   --pad-h: 48px;
   --section-pad: 120px;
@@ -75,7 +75,7 @@ a { text-decoration: none; color: inherit; }
 .btn-secondary:hover { border-color: rgba(255,255,255,0.8); }
 .btn-dark {
   background: var(--text);
-  color: #111;
+  color: #fff;
 }
 .btn-dark:hover { background: #333; }
 .btn-outline {
@@ -100,7 +100,7 @@ nav {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 nav.scrolled {
-  background: rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(0,0,0,0.08);
@@ -176,7 +176,7 @@ nav.scrolled .nav-cta:hover { background: #2a46e8 !important; }
   align-items: flex-start;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--card-border);
+  border-bottom: 1px solid #f0f0f0;
   transition: color 0.2s ease;
 }
 .mega-item:last-child { border-bottom: none; }
@@ -222,8 +222,8 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
   display: none;
   position: fixed;
   inset: 0;
-  background: #111;
-  z-index: 99999;
+  background: #fff;
+  z-index: 999;
   padding: 80px 24px 40px;
   flex-direction: column;
   gap: 8px;
@@ -344,7 +344,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 /* ===================== MARQUEE ===================== */
 #marquee {
   padding: 32px 0;
-  background: #242424;
+  background: #fff;
   border-bottom: 1px solid var(--card-border);
   overflow: hidden;
 }
@@ -395,8 +395,8 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
   width: 120px;
   z-index: 1;
 }
-.marquee-wrapper::before { left: 0; background: linear-gradient(to right, #242424, transparent); }
-.marquee-wrapper::after { right: 0; background: linear-gradient(to left, #242424, transparent); }
+.marquee-wrapper::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+.marquee-wrapper::after { right: 0; background: linear-gradient(to left, #fff, transparent); }
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -405,7 +405,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 /* ===================== SERVICES ===================== */
 #services {
   padding: var(--section-pad) 0;
-  background: #111;
+  background: #fff;
 }
 .services-header { text-align: center; max-width: 640px; margin: 0 auto 64px; }
 .services-cards {
@@ -490,7 +490,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 /* ===================== CASE STUDIES ===================== */
 #case-studies {
   padding: var(--section-pad) 0;
-  background: #111;
+  background: #fff;
 }
 .case-header { margin-bottom: 56px; }
 .case-layout {
@@ -515,7 +515,6 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 .case-tab.active {
   background: var(--text);
   border-color: var(--text);
-
 }
 .case-tab-label {
   font-size: 11px;
@@ -526,7 +525,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
   margin-bottom: 4px;
   transition: color 0.2s ease;
 }
-.case-tab.active .case-tab-label { color: rgba(0,0,0,0.6); }
+.case-tab.active .case-tab-label { color: rgba(255,255,255,0.6); }
 .case-tab-title {
   font-family: "Google Sans", sans-serif;
   font-weight: 600;
@@ -534,7 +533,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
   color: var(--text);
   transition: color 0.2s ease;
 }
-.case-tab.active .case-tab-title { color: #111; }
+.case-tab.active .case-tab-title { color: #fff; }
 .case-display { position: relative; }
 .case-panel { display: none; }
 .case-panel.active { display: block; }
@@ -586,7 +585,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 @media (max-width: 1024px) { .capabilities-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .capabilities-grid { grid-template-columns: 1fr; } }
 .cap-card {
-  background: #111;
+  background: #fff;
   border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 32px 28px;
@@ -625,7 +624,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 /* ===================== SECTORS ===================== */
 #sectors {
   padding: var(--section-pad) 0;
-  background: #111;
+  background: #fff;
 }
 .sectors-header { max-width: 600px; margin-bottom: 56px; }
 .sectors-tabs-row {
@@ -797,7 +796,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 }
 @media (max-width: 768px) { .team-layout { grid-template-columns: 1fr; } }
 .team-card {
-  background: #111;
+  background: #fff;
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 36px 32px;
@@ -895,7 +894,7 @@ nav.scrolled .nav-hamburger span { background: var(--text); }
 
 /* ===================== FOOTER ===================== */
 footer {
-  background: #111;
+  background: #fff;
   border-top: 1px solid var(--card-border);
   padding: 72px 0 40px;
 }
@@ -962,7 +961,7 @@ footer {
   left: 0;
   right: 0;
   z-index: 990;
-  background: #242424;
+  background: #fff;
   border-top: 1px solid var(--card-border);
   box-shadow: 0 -8px 32px rgba(0,0,0,0.08);
   padding: 14px var(--pad-h);
@@ -988,7 +987,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(61,90,254,0.08);
   border: 1px solid rgba(61,90,254,0.2);
   border-radius: 100px;
   padding: 5px 12px;
@@ -1050,17 +1049,81 @@ footer {
 @media (max-width: 768px) {
   .sticky-cta-subtext { display: none; }
   .sticky-cta-text { font-size: 13px; }
-  #sticky-cta { padding: 12px 16px; display: none;}
+  #sticky-cta { padding: 12px 16px;display: none; }
 }
 .mt-1x {
   margin-top: 16px;
+}
+/* contact-mailer */
+.contact-mailer_bg{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.contact-mailer{
+  position: relative;
+  background: #242424;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 800px;
+  padding: 50px;
+}
+.contact-mailer h3{
+  margin-bottom: 30px;
+}
+.contact-mailer-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field-message {
+  margin-top: 20px;
+}
+.field-grid input ,
+.field-message textarea {
+  width:100%;
+  height:50px;
+  padding:0 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background: #242424;
+  border: 1px solid var(--card-border);
+  color:var(--text);
+}
+.field-message textarea {
+  height:150px;
+  padding:10px;
+}
+.field-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .field-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* contact-mailer */
 .contact-mailer_bg{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.6);
   backdrop-filter: blur(4px);
   z-index: 9999;
   display: none;
@@ -1081,8 +1144,8 @@ footer {
 }
 .contact-mailer{
   position: relative;
-  background: #242424;
-  border: 1px solid var(--card-border);
+  background: #fff;
+  border: 1px solid var(--muted);
   border-radius: 12px;
   padding: 24px;
   width: 90%;
@@ -1092,6 +1155,7 @@ footer {
 }
 .contact-mailer h2{
   margin-bottom: 10px;
+  color:#fff;
 }
 .contact-mailer-description {
   margin-bottom: 30px;
@@ -1123,6 +1187,9 @@ footer {
 .field-message {
   margin-top: 20px;
 }
+.field label{
+  color:#fff;
+}
 .field-grid input ,
 .field-message textarea {
   width:100%;
@@ -1131,8 +1198,8 @@ footer {
   margin-top: 15px;
   border-radius: 8px;
   background: transparent;
-  border: 1px solid var(--card-border);
-  color:var(--text);
+  border: 1px solid var(--muted);
+  color:#fff
 }
 .field-message textarea {
   height:150px;
