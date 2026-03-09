@@ -1,5 +1,6 @@
 export { default as Capabilities } from "./capabilities";
 export { default as CaseStudies } from "./caseStudies";
+export { default as ContactForm } from "./contactMailer";
 export { default as EmailCapture } from "./emailCapture";
 export { default as Footer } from "./footer";
 export { default as GetStarted } from "./getStarted";
