@@ -6,7 +6,7 @@ const TEMPLATE_ID = process.env.REACT_APP_MAIL_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.REACT_APP_MAIL_PUBLIC_KEY;
 // debug: ensure env values are present at build time
 
-const ContactForm = () => {
+const ContactForm = ({ email }) => {
 	const formRef = useRef(null);
 	const [status, setStatus] = useState(null); // "success" | "error" | null
 	const [loading, setLoading] = useState(false);
@@ -96,7 +96,13 @@ const ContactForm = () => {
 
 								<div className="field">
 									<label htmlFor="user_email">Email Address</label>
-									<input id="user_email" type="email" name="email" required />
+									<input
+										id="user_email"
+										type="email"
+										name="email"
+										value={email ? email : ""}
+										required
+									/>
 								</div>
 								<div className="field">
 									<label htmlFor="user_phone">Contact Number</label>
