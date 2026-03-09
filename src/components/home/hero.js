@@ -1,6 +1,6 @@
 const Hero = (props) => {
 	return (
-		<section id="hero" ariaLabelledby="hero-heading">
+		<section id="hero" aria-labelledby="hero-heading">
 			<video
 				autoPlay
 				muted

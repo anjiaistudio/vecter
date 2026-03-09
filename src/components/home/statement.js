@@ -15,14 +15,12 @@ const Statement = (props) => {
 						style={{
 							display: "flex",
 							gap: "32px",
-							"justify-content": "center",
-							"flex-wrap": "wrap",
-							"margin-top": "40px",
+							justifyContent: "center",
+							flexWrap: "wrap",
+							marginTop: "40px",
 						}}
 					>
-						<div
-							style={{ display: "flex", "align-items": "center", gap: "10px" }}
-						>
+						<div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 							<div
 								style={{
 									width: "8px",
@@ -41,9 +39,7 @@ const Statement = (props) => {
 								Microsoft 365 &amp; Copilot native
 							</span>
 						</div>
-						<div
-							style={{ display: "flex", "align-items": "center", gap: "10px" }}
-						>
+						<div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 							<div
 								style={{
 									width: "8px",
@@ -62,9 +58,7 @@ const Statement = (props) => {
 								Power Automate &amp; Power BI integrated
 							</span>
 						</div>
-						<div
-							style={{ display: "flex", "align-items": "center", gap: "10px" }}
-						>
+						<div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 							<div
 								style={{
 									width: "8px",

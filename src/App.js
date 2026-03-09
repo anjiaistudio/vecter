@@ -31,6 +31,7 @@ function ensureThemeLink() {
 
 function App() {
 	const [email, setEmail] = useState("");
+	const [type, formType] = useState(1);
 	const [theme, setTheme] = useState(() => {
 		try {
 			return localStorage.getItem("theme") || "light";
@@ -84,11 +85,17 @@ function App() {
 				<CaseStudies />
 				<Capabilities />
 				<Sectors />
-				<EmailCapture saveEmail={(email) => setEmail(email)} />
+				<EmailCapture
+					formType={(id) => formType(id)}
+					saveEmail={(email) => setEmail(email)}
+				/>
 				<Governance />
 				<Team />
-				<GetStarted />
-				<ContactForm email={email} />
+				<GetStarted
+					formType={(id) => formType(id)}
+					saveEmail={(email) => setEmail(email)}
+				/>
+				<ContactForm type={type} email={email} />
 			</main>
 			<Footer />
 		</div>

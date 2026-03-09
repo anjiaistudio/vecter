@@ -1,11 +1,13 @@
 const GetStarted = (props) => {
 	const openForm = () => {
+		props.formType(1);
+		props.saveEmail("");
 		document.getElementById("contactMailer").style.display = "block";
 	};
 	return (
 		<section id="get-started" aria-labelledby="cta-heading">
 			<video
-				autoplay
+				autoPlay
 				muted
 				loop
 				playsInline

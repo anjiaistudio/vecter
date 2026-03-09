@@ -17,15 +17,14 @@ const Team = (props) => {
 						<div className="team-name">Rohit Lakhotia</div>
 						<div className="team-role">Co-Founder &amp; Strategy</div>
 						<p>
-							Ex Head of Customer and Channel AI at Vecter. One of Australia's
-							leading authorities on AI automation. Creator of Ask Vecter.
-							Proven track record delivering market-leading automation outcomes
-							at enterprise scale.
+							Ex Head of Customer AI. Recognised industry voice on responsible
+							AI automation and enterprise deployment. Proven track record
+							delivering market-leading automation outcomes at enterprise scale.
 						</p>
 					</div>
 					<div className="team-card">
 						<div className="team-avatar">AJ</div>
-						<div className="team-name">Anji J</div>
+						<div className="team-name">Anji</div>
 						<div className="team-role">Co-Founder &amp; Technology</div>
 						<p>
 							Principal Engineer, GenAI &amp; Enterprise AI Architect. Built

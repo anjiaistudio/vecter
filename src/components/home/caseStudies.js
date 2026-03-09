@@ -39,7 +39,7 @@ const CaseStudies = (props) => {
 				<div className="case-header">
 					<span className="section-label">Case Studies</span>
 					<h2 id="case-heading">AI Delivering Measurable Business Outcomes</h2>
-					<p style={{ "margin-top": "16px", "max-width": "520px" }}>
+					<p style={{ marginTop: "16px", maxWidth: "520px" }}>
 						See how Vecter's agentic AI systems are transforming enterprise
 						operations across industries.
 					</p>
@@ -51,7 +51,7 @@ const CaseStudies = (props) => {
 							data-panel="routing"
 							role="tab"
 							aria-selected="true"
-							tabindex="0"
+							tabIndex="0"
 						>
 							<div className="case-tab-label">Telco</div>
 							<div className="case-tab-title">Intelligent Routing</div>
@@ -61,7 +61,7 @@ const CaseStudies = (props) => {
 							data-panel="analytics"
 							role="tab"
 							aria-selected="false"
-							tabindex="0"
+							tabIndex="0"
 						>
 							<div className="case-tab-label">Finance</div>
 							<div className="case-tab-title">Reporting &amp; Analytics</div>
@@ -71,7 +71,7 @@ const CaseStudies = (props) => {
 							data-panel="documents"
 							role="tab"
 							aria-selected="false"
-							tabindex="0"
+							tabIndex="0"
 						>
 							<div className="case-tab-label">Legal</div>
 							<div className="case-tab-title">Document Intelligence</div>
@@ -81,7 +81,7 @@ const CaseStudies = (props) => {
 							data-panel="onboarding"
 							role="tab"
 							aria-selected="false"
-							tabindex="0"
+							tabIndex="0"
 						>
 							<div className="case-tab-label">HR</div>
 							<div className="case-tab-title">Agentic Onboarding</div>
