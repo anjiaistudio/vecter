@@ -1,37 +1,76 @@
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const SERVICE_ID = process.env.REACT_APP_MAIL_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_MAIL_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.REACT_APP_MAIL_PUBLIC_KEY;
-// debug: ensure env values are present at build time
 
-const ContactForm = ({ email }) => {
-	const formRef = useRef(null);
+const ContactForm = ({ type, email: initialEmail }) => {
+	const [text, setText] = useState({
+		title: "Let's talk about your AI use case",
+		desc: "Have a business challenge in mind? We'll help you assess AI feasibility, define the right approach,  and build a clear path to execution — starting with the tools you already have.",
+	});
 	const [status, setStatus] = useState(null); // "success" | "error" | null
 	const [loading, setLoading] = useState(false);
+	const [form, setForm] = useState({
+		business: "",
+		role: "",
+		name: "",
+		email: type === 0 ? initialEmail || "" : "",
+		contact_number: "",
+		type: "",
+		message: "",
+	});
+
+	useEffect(() => {
+		if (type === 0) {
+			if (initialEmail) setForm((f) => ({ ...f, email: initialEmail }));
+			setText({
+				title: "See your AI ROI projection",
+				desc: "Enter your details for a tailored assessment of your automation opportunity.",
+			});
+		}
+		if (type === 1) {
+			setForm((f) => ({ ...f, email: "" }));
+			setText({
+				title: "Let's talk about your AI use case",
+				desc: "Have a business challenge in mind? We'll help you assess AI feasibility, define the right approach,  and build a clear path to execution — starting with the tools you already have.",
+			});
+		}
+	}, [initialEmail, type]);
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setForm((prev) => ({ ...prev, [name]: value }));
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (!formRef.current) return;
-
 		setLoading(true);
 		setStatus(null);
 
+		const templateParams = { ...form };
+
 		emailjs
-			.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+			.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
 			.then(
 				() => {
 					setStatus("success");
-					formRef.current.reset();
+					setForm({
+						business: "",
+						role: "",
+						name: "",
+						email: initialEmail || "",
+						contact_number: "",
+						type: "",
+						message: "",
+					});
 					setTimeout(() => {
 						document.getElementById("contactMailer").style.display = "none";
 						setStatus(null);
 					}, 3000);
 				},
-				() => {
-					setStatus("error");
-				},
+				() => setStatus("error"),
 			)
 			.finally(() => setLoading(false));
 	};
@@ -50,7 +89,7 @@ const ContactForm = ({ email }) => {
 			<div className="contact-mailer_box">
 				<div className="contact-mailer">
 					<video
-						autoplay
+						autoPlay
 						muted
 						loop
 						playsInline
@@ -69,29 +108,42 @@ const ContactForm = ({ email }) => {
 						</button>
 					</div>
 					<div className="contact-overlay">
-						<h2>Let's talk about your AI use case</h2>
-						<p className="contact-mailer-description">
-							Have a business challenge in mind? We'll help you assess AI
-							feasibility, define the right approach, and build a clear path to
-							execution — starting with the tools you already have.
-						</p>
-						<form
-							ref={formRef}
-							onSubmit={handleSubmit}
-							className="contact-form"
-						>
+						<h2>{text.title}</h2>
+						<p className="contact-mailer-description">{text.desc}</p>
+						<form onSubmit={handleSubmit} className="contact-form">
 							<div className="field-grid">
 								<div className="field">
 									<label htmlFor="business">Business/Sector</label>
-									<input id="business" type="text" name="business" required />
+									<input
+										id="business"
+										type="text"
+										name="business"
+										value={form.business}
+										onChange={handleChange}
+										required
+									/>
 								</div>
 								<div className="field">
 									<label htmlFor="role">Role/Position</label>
-									<input id="role" type="text" name="role" required />
+									<input
+										id="role"
+										type="text"
+										name="role"
+										value={form.role}
+										onChange={handleChange}
+										required
+									/>
 								</div>
 								<div className="field">
 									<label htmlFor="user_name">Full Name</label>
-									<input id="user_name" type="text" name="name" required />
+									<input
+										id="user_name"
+										type="text"
+										name="name"
+										value={form.name}
+										onChange={handleChange}
+										required
+									/>
 								</div>
 
 								<div className="field">
@@ -100,7 +152,8 @@ const ContactForm = ({ email }) => {
 										id="user_email"
 										type="email"
 										name="email"
-										value={email ? email : ""}
+										value={form.email}
+										onChange={handleChange}
 										required
 									/>
 								</div>
@@ -110,13 +163,22 @@ const ContactForm = ({ email }) => {
 										id="user_phone"
 										type="text"
 										name="contact_number"
+										value={form.contact_number}
+										onChange={handleChange}
 										required
 									/>
 								</div>
 
 								<div className="field">
-									<label htmlFor="user_subject">Problem Subject</label>
-									<input id="user_subject" type="text" name="type" required />
+									<label htmlFor="user_subject">Problem Summery</label>
+									<input
+										id="user_subject"
+										type="text"
+										name="type"
+										value={form.type}
+										onChange={handleChange}
+										required
+									/>
 								</div>
 							</div>
 
@@ -125,7 +187,14 @@ const ContactForm = ({ email }) => {
 									What is the specific bottleneck or 'manual pain point' you
 									want to address?
 								</label>
-								<textarea id="message" name="message" rows={4} required />
+								<textarea
+									id="message"
+									name="message"
+									rows={4}
+									value={form.message}
+									onChange={handleChange}
+									required
+								/>
 							</div>
 
 							<div className="field-btn ">

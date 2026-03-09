@@ -5,7 +5,7 @@ const Services = (props) => {
 				<div className="services-header">
 					<span className="section-label">Our Process</span>
 					<h2 id="services-heading">How We Deliver AI That Works</h2>
-					<p style={{ "margin-top": "16px" }}>
+					<p style={{ marginTop: "16px" }}>
 						We don't just recommend AI — we build, deploy, and improve it. Every
 						engagement follows a proven methodology designed to produce real
 						business outcomes.

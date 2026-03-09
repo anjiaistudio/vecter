@@ -29,12 +29,15 @@ const EmailCapture = (props) => {
 								aria-label="Work email address"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
+								required
 							/>
 							<button
 								className="capture-btn"
 								type="button"
 								onClick={() => {
 									props.saveEmail(email);
+									props.formType(0);
+									setEmail("");
 									openContactForm();
 								}}
 							>
